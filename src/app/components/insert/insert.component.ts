@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-var lat = document.getElementById('lat');
-var lng = document.getElementById('lng');
+
 
 @Component({
   selector: 'app-insert',
@@ -17,19 +16,12 @@ export class InsertComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  logCord(){
-    if (lat) {
-      console.log(lat);
+  logCord(lat: string, lng:  string){
+
+    if (lat && lng) {
+      console.log('lat'+ ' ' + lat + ' ' + ' ' + '&' + ' ' + ' ' + 'lng' + ' ' + lng);
 
     }
-
-     if (lng) {
-      console.log(lng);
-
-    } else{
-      console.log('click');
-    }
-
   }
 
 }
