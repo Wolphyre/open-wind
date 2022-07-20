@@ -31,6 +31,7 @@ export class WeatherService {
     const windDirectionArray80m = data.hourly.winddirection_80m;
     const windDirectionArray120m = data.hourly.windDirection120m;
     const windDirectionArray180m = data.hourly.winddirection_180m;
+    const windGustArray = data.hourly.windgusts_10m
 
 
     const forecastArray: WindForecast[] = [];
@@ -46,20 +47,21 @@ export class WeatherService {
       const windDirection80m = windDirectionArray80m[i];
       const windDirection120m = windDirectionArray120m[i];
       const windDirection180m = windDirectionArray180m[i];
+      const windGust = windGustArray[i];
 
 
       const forecast: WindForecast = {
         time: time,
         precipitation: precipitation,
         windspeed_10m: windSpeed10m,
-        windspeed_80m: '',
-        windspeed_120m: '',
-        windspeed_180m: '',
+        windspeed_80m: windSpeed80m,
+        windspeed_120m: windSpeed120m,
+        windspeed_180m: windSpeed180m,
         winddirection_10m: windDirection10m,
-        winddirection_80m: '',
-        winddirection_120m: '',
-        winddirection_180m: '',
-        windgusts_10m: ''
+        winddirection_80m: windDirection80m,
+        winddirection_120m: windDirection120m,
+        winddirection_180m: windDirection180m,
+      windgusts_10m: windGust
       };
 
       forecastArray.push(forecast);
