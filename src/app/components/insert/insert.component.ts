@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 
-
-
 @Component({
   selector: 'app-insert',
   templateUrl: './insert.component.html',
@@ -16,6 +14,8 @@ export class InsertComponent implements OnInit {
   ngOnInit(): void {
   }
 
+
+  
   logCord(lat: string, lng:  string){
 
     if (lat && lng) {
