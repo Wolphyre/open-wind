@@ -1,7 +1,7 @@
 <span class="input-data">
-  <input type="number" #lat>
+  <input type="number" #lat >
   <input type="number" #lng>
-  <a routerLink="/meteo/{{lat.value}}@{{lng.value}}" class="coord-button">GO!</a>
-  <!-- <button class="coord-button" (click)="logCord(lat.value , lng.value)">GO</button> -->
+  <!-- <a routerLink="/meteo/{{lat.value}}@{{lng.value}}" class="coord-button">GO!</a> -->
+  <button class="coord-button" (click)="logCord(lat.value , lng.value)">GO</button>
 </span>
 
