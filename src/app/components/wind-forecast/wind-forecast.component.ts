@@ -10,20 +10,11 @@ import { WeatherService } from 'src/app/services/weather-service/weather.service
 })
 export class WindForecastComponent implements OnInit {
 
-  forecastArray: WindForecast[] = [];
 
   constructor(private route: ActivatedRoute, private weatherServ: WeatherService ) { }
 
   ngOnInit(): void {
-    if (this.route.snapshot.params['latlng']) {
-      const latlng = this.route.snapshot.params['latlng'];
-      const lat = latlng.split('@')[0];
-      const lng = latlng.split('@')[1];
-      this.weatherServ.getMeteoForecast(lat, lng).subscribe({
-        next: (data) => this.forecastArray = data,
-        error: (err) => console.log(err)
-      });
-    }
+
   }
 
 }

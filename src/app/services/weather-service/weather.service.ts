@@ -8,11 +8,12 @@ import { WindForecast } from 'src/app/model/wind-forecast';
 })
 export class WeatherService {
 
+
   private readonly URL = 'https://api.open-meteo.com/v1/forecast?hourly=precipitation,windspeed_10m,windspeed_80m,windspeed_120m,windspeed_180m,winddirection_10m,winddirection_80m,winddirection_120m,winddirection_180m,windgusts_10m&timezone=Europe%2FBerlin'
 
   constructor(private http: HttpClient) { }
 
-  getMeteoForecast(lat: string, lng: string) {
+  getMeteoForecastWithLatLng(lat: string, lng: string) {
     const url = this.URL + '&latitude=' + lat + '&longitude=' + lng;
     return this.http.get<WindForecast[]>(url).pipe(
       map(data => this.parseWindData(data))
@@ -29,7 +30,7 @@ export class WeatherService {
     const windSpeedAray180m = data.hourly.windspeed_180m;
     const windDirectionArray10m = data.hourly.winddirection_10m;
     const windDirectionArray80m = data.hourly.winddirection_80m;
-    const windDirectionArray120m = data.hourly.windDirection120m;
+    const windDirectionArray120m = data.hourly.winddirection_120m;
     const windDirectionArray180m = data.hourly.winddirection_180m;
     const windGustArray = data.hourly.windgusts_10m
 
