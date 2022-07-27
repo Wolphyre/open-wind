@@ -1,13 +1,13 @@
 export interface WindForecast {
   time: string;
-  precipitation: string;
-  windspeed_10m: string;
-  windspeed_80m: string;
-  windspeed_120m: string;
-  windspeed_180m: string;
-  winddirection_10m: string;
-  winddirection_80m: string;
-  winddirection_120m: string;
-  winddirection_180m: string;
-  windgusts_10m: string;
+  precipitation: number;
+  windspeed_10m: number;
+  windspeed_80m: number;
+  windspeed_120m: number;
+  windspeed_180m: number;
+  winddirection_10m: number;
+  winddirection_80m: number;
+  winddirection_120m: number;
+  winddirection_180m: number;
+  windgusts_10m: number;
 }

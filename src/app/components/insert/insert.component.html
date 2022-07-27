@@ -5,16 +5,16 @@
   <!-- <a routerLink="/meteo/{{lat.value}}@{{lng.value}}" class="coord-button">GO!</a> -->
   <button class="coord-button" (click)="displayCord(lat.value , lng.value)">GO</button>
   <div *ngFor="let forecast of forecastData" class="data-container">
-    <span>{{forecast.time}}</span>
-    <span>Precipitation: {{forecast.precipitation}}</span>
-    <span>Wind speed 10 m:{{forecast.windspeed_10m}}</span>
-    <span>Wind direction 10 m:{{forecast.winddirection_10m}}</span>
-    <span>Wind speed 80 m: {{forecast.windspeed_80m}}</span>
-    <span>Wind direction 80 m:{{forecast.winddirection_80m}}</span>
-    <span>Wind speed 120 m: {{forecast.windspeed_120m}}</span>
-    <span>Wind direction 120 m:{{forecast.winddirection_120m}}</span>
-    <span>Wind speed 180 m: {{forecast.windspeed_180m}}</span>
-    <span>Wind direction 180 m:{{forecast.winddirection_180m}}</span>
+    <span class="data-span">{{forecast.time | date}}</span>
+    <span class="data-span">Precipitation: {{forecast.precipitation | unit: ' mm'}}</span>
+    <span class="data-span">Wind speed 10 m:{{forecast.windspeed_10m | unit: ' km/h'}}</span>
+    <span class="data-span">Wind direction 10 m:{{forecast.winddirection_10m | unit: ' ° N'}}</span>
+    <span class="data-span">Wind speed 80 m: {{forecast.windspeed_80m | unit: ' km/h'}}</span>
+    <span class="data-span">Wind direction 80 m:{{forecast.winddirection_80m | unit: ' ° N'}}</span>
+    <span class="data-span">Wind speed 120 m: {{forecast.windspeed_120m | unit: ' km/h'}}</span>
+    <span class="data-span">Wind direction 120 m:{{forecast.winddirection_120m | unit: ' ° N'}}</span>
+    <span class="data-span">Wind speed 180 m: {{forecast.windspeed_180m | unit: ' km/h'}}</span>
+    <span class="data-span">Wind direction 180 m:{{forecast.winddirection_180m | unit: ' ° N'}}</span>
   </div>
 </span>
 

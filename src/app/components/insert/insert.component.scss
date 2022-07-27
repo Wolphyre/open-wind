@@ -42,9 +42,18 @@ input{
 }
 
 .data-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   margin: 8px;
   padding: 8px;
   background-color: rgba(0, 0, 0, 0.09);
   width: 36rem;
   height: fit-content;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);
+}
+
+.data-span{
+  margin: 8px;
+  padding: 8px;
 }
