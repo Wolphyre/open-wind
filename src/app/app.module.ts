@@ -8,13 +8,17 @@ import { InsertComponent } from './components/insert/insert.component';
 import { FormsModule } from '@angular/forms';
 import { WindForecastComponent } from './components/wind-forecast/wind-forecast.component';
 import { UnitPipe } from './components/pipes/unit-pipe/unit.pipe';
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     InsertComponent,
     WindForecastComponent,
-    UnitPipe
+    UnitPipe,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
