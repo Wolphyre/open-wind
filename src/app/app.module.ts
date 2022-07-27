@@ -6,11 +6,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { InsertComponent } from './components/insert/insert.component';
 import { FormsModule } from '@angular/forms';
+import { WindForecastComponent } from './components/wind-forecast/wind-forecast.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    InsertComponent
+    InsertComponent,
+    WindForecastComponent
   ],
   imports: [
     BrowserModule,
