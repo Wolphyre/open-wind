@@ -10,6 +10,7 @@ import { WindForecastComponent } from './components/wind-forecast/wind-forecast.
 import { UnitPipe } from './components/pipes/unit-pipe/unit.pipe';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { ArrowDirectionPipe } from './components/pipes/arrow-direction/arrow-direction.pipe';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { FooterComponent } from './components/footer/footer.component';
     WindForecastComponent,
     UnitPipe,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    ArrowDirectionPipe
   ],
   imports: [
     BrowserModule,

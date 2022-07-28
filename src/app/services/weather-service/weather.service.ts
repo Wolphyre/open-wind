@@ -70,6 +70,14 @@ export class WeatherService {
     return forecastArray;
   }
 
-
+  verifyValue(lat: string, lng: string){
+    let latNUmeric = Number(lat);
+    let lngNUmeric = Number(lng);
+    if (latNUmeric < -91 || latNUmeric >= 90 ) {
+      alert('Errore, la latitudine deve essere un valore entro -90° e 89.9°')
+    } else if (lngNUmeric < -1 || lngNUmeric >= 180) {
+      alert('Errore, la longitudine deve essere un valore entro 0° e 179.9°')
+    }
+  }
 }
 

@@ -41,13 +41,19 @@ input{
   text-decoration: none;
 }
 
+.container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
 .data-container{
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin: 8px;
   padding: 8px;
+  margin-bottom: 24px;
   background-color: rgba(0, 0, 0, 0.09);
-  width: 36rem;
+  width: fit-content;
   height: fit-content;
   border-radius: 16px;
   box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);
@@ -56,4 +62,9 @@ input{
 .data-span{
   margin: 8px;
   padding: 8px;
+}
+
+.arrow-img{
+width: auto;
+height: 20%;
 }
