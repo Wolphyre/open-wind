@@ -10,7 +10,7 @@
       <span class="data-span">{{forecast.time | date}}</span>
       <span class="data-span">Precipitation: {{forecast.precipitation | unit: ' mm'}}</span>
       <span class="data-span">Wind speed 10 m: {{forecast.windspeed_10m | unit: ' km/h'}}</span>
-      <span class="data-span">Wind direction 10 m: {{forecast.winddirection_10m | unit: ' ° N' }} <img class="arrow-img" src="{{forecast.winddirection_10m | arrowDirection}}" alt=""></span>
+      <span class="data-span">Wind direction 10 m: {{forecast.winddirection_10m | unit: ' ° N' }} <img class="arrow-img" id="arrow" src="../../../assets/arrow/north.svg" alt=""></span>
       <span class="data-span">Wind speed 80 m: {{forecast.windspeed_80m | unit: ' km/h'}}</span>
       <span class="data-span">Wind direction 80 m: {{forecast.winddirection_80m | unit: ' ° N'}} <img class="arrow-img" src="{{forecast.winddirection_80m | arrowDirection}}" alt=""></span>
       <span class="data-span">Wind speed 120 m: {{forecast.windspeed_120m | unit: ' km/h'}}</span>
