@@ -25,7 +25,7 @@ export class ArrowDirectionPipe implements PipeTransform {
     
     switch (dir) {
       case 0:
-        return './assets/arrow/north-east.svg';
+        return './assets/arrow/north.svg';
       case 1: 
         return './assets/arrow/north-east.svg' ;
       case 2:
