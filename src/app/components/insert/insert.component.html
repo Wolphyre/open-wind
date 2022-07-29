@@ -1,17 +1,16 @@
 <div class="input-data">
 
-  <span class="lat-lng-span">Put your latitude here<input type="number" min="-90" max="89.9" #lat ></span>
-  <span class="lat-lng-span">Put your longitude here<input type="number" min="0" max="179.9" #lng></span>
+  <span class="lat-lng-span">Put your latitude here<input type="number" min="-90" max="89.9" #lat [defaultValue]="44"></span>
+  <span class="lat-lng-span">Put your longitude here<input type="number" min="0" max="179.9" #lng [defaultValue]="5"></span>
   <!-- <a routerLink="/meteo/{{lat.value}}@{{lng.value}}" class="coord-button">GO!</a> -->
   <button class="coord-button"  (click)="displayCord(lat.value , lng.value)">GO</button>
-  <input type="string" #try> <button (click)="funzioneDiProva(ParseInt(try.value))">provaaaaa</button>
 </div>
   <div class="container">
     <div *ngFor="let forecast of forecastData" class="data-container">
       <span class="data-span">{{forecast.time | date}}</span>
       <span class="data-span">Precipitation: {{forecast.precipitation | unit: ' mm'}}</span>
       <span class="data-span">Wind speed 10 m: {{forecast.windspeed_10m | unit: ' km/h'}}</span>
-      <span class="data-span">Wind direction 10 m: {{forecast.winddirection_10m | unit: ' ° N'}} <p>{{forecast.winddirection_10m | arrowDirection}}</p></span>
+      <span class="data-span">Wind direction 10 m: {{forecast.winddirection_10m | unit: ' ° N'}} <img class="arrow-img" src="{{forecast.winddirection_10m | arrowDirection}}" alt=""> </span>
       <span class="data-span">Wind speed 80 m: {{forecast.windspeed_80m | unit: ' km/h'}}</span>
       <span class="data-span">Wind direction 80 m: {{forecast.winddirection_80m | unit: ' ° N'}} <img class="arrow-img" src="{{forecast.winddirection_80m | arrowDirection}}" alt=""></span>
       <span class="data-span">Wind speed 120 m: {{forecast.windspeed_120m | unit: ' km/h'}}</span>
