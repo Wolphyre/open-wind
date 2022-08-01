@@ -13,6 +13,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ArrowDirectionPipe } from './components/pipes/arrow-direction/arrow-direction.pipe';
 import { IntensityPipe } from './components/pipes/wind-intensity/intensity.pipe';
+import { CustomDatePipe } from './components/pipes/custom-date/custom-date.pipe';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { IntensityPipe } from './components/pipes/wind-intensity/intensity.pipe'
     HeaderComponent,
     FooterComponent,
     ArrowDirectionPipe,
-    IntensityPipe
+    IntensityPipe,
+    CustomDatePipe
   ],
   imports: [
     BrowserModule,

@@ -8,7 +8,7 @@
 </div>
   <div class="container">
     <div *ngFor="let forecast of forecastData" class="data-container">
-      <span class="data-span">{{forecast.time | date }}</span>
+      <span class="data-span">{{forecast.time | customDate}}</span>
       <span class="data-span">Precipitation: {{forecast.precipitation | unit: ' mm'}} </span>
       <span class="data-span">Wind speed 10 m: {{forecast.windspeed_10m | unit: ' km/h'}} <img src="{{forecast.windspeed_10m | intensity}}" alt=""></span>
       <span class="data-span">Wind direction 10 m: {{forecast.winddirection_10m | unit: ' ° N'}} <img class="arrow-img" src="{{forecast.winddirection_10m | arrowDirection}}" alt=""> </span>
