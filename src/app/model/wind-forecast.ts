@@ -1,5 +1,7 @@
+import { Time } from "@angular/common";
+
 export interface WindForecast {
-  time: string;
+  time: string | number | Date;
   precipitation: number;
   windspeed_10m: number;
   windspeed_80m: number;

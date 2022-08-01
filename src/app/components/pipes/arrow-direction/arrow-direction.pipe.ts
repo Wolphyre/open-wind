@@ -18,10 +18,10 @@ export class ArrowDirectionPipe implements PipeTransform {
     let deg = (degMod - turn) * 360;
 
     let dir = Math.floor(deg  / mod);
-    console.log('dir: ' + dir);
+    // console.log('dir: ' + dir);
 
     dir = dir - Math.floor(dir / 8) * 8;
-    console.log('Nuova dir: ' + dir);
+    // console.log('Nuova dir: ' + dir);
     
     switch (dir) {
       case 0:
@@ -41,8 +41,8 @@ export class ArrowDirectionPipe implements PipeTransform {
       case 7 :
         return './assets/arrow/north-west.svg';
       default:
-        console.log(dir);
-        return 'errore'
+        // console.log(dir);
+        return 'error'
     }
     }
   }

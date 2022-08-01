@@ -12,6 +12,7 @@ import { UnitPipe } from './components/pipes/unit-pipe/unit.pipe';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ArrowDirectionPipe } from './components/pipes/arrow-direction/arrow-direction.pipe';
+import { IntensityPipe } from './components/pipes/wind-intensity/intensity.pipe';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ArrowDirectionPipe } from './components/pipes/arrow-direction/arrow-dir
     UnitPipe,
     HeaderComponent,
     FooterComponent,
-    ArrowDirectionPipe
+    ArrowDirectionPipe,
+    IntensityPipe
   ],
   imports: [
     BrowserModule,
