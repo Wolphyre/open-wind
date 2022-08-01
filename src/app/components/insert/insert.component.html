@@ -8,17 +8,25 @@
 </div>
   <div class="container">
     <div *ngFor="let forecast of forecastData" class="data-container">
-      <span class="data-span">{{forecast.time | customDate}}</span>
-      <span class="data-span">Precipitation: {{forecast.precipitation | unit: ' mm'}} </span>
-      <span class="data-span">Wind speed 10 m: {{forecast.windspeed_10m | unit: ' km/h'}} <img src="{{forecast.windspeed_10m | intensity}}" alt=""></span> 
-      <span class="data-span">Wind direction 10 m: {{forecast.winddirection_10m | unit: ' ° N'}} <img class="arrow-img" src="{{forecast.winddirection_10m | arrowDirection}}" alt=""> </span>
-      <span class="data-span">Wind speed 80 m: {{forecast.windspeed_80m | unit: ' km/h'}} <img src="{{forecast.windspeed_80m | intensity}}" alt=""></span>
-      <span class="data-span">Wind direction 80 m: {{forecast.winddirection_80m | unit: ' ° N'}} <img class="arrow-img" src="{{forecast.winddirection_80m | arrowDirection}}" alt=""></span>
-      <span class="data-span">Wind speed 120 m: {{forecast.windspeed_120m | unit: ' km/h'}} <img src="{{forecast.windspeed_120m | intensity}}" alt=""></span>
-      <span class="data-span">Wind direction 120 m:{{forecast.winddirection_120m | unit: ' ° N'}} <img class="arrow-img" src="{{forecast.winddirection_120m | arrowDirection}}" alt=""></span>
-      <span class="data-span">Wind speed 180 m: {{forecast.windspeed_180m | unit: ' km/h'}} <img src="{{forecast.windspeed_180m | intensity}}" alt=""></span>
-      <span class="data-span">Wind direction 180 m: {{forecast.winddirection_180m | unit: ' ° N'}} <img class="arrow-img" src="{{forecast.winddirection_180m | arrowDirection}}" alt=""></span>
-      <span class="data-span">Wind guts: {{forecast.windgusts_10m}}</span>
+      <span class="data-span-time">{{forecast.time | customDate}}</span>
+      <span class="data-span">Precipitation: <br> {{forecast.precipitation | unit: ' mm'}} <img class="precipitation-img" src="{{forecast.precipitation | precipitation}}" alt=""> </span>
+
+      <span class="data-span">Wind speed 10 m: <br> {{forecast.windspeed_10m | unit: ' km/h'}} <img class="wind-img" src="{{forecast.windspeed_10m | intensity}}" alt=""> </span> 
+      <span class="data-span">Wind direction 10 m: <br> {{forecast.winddirection_10m | unit: '° N'}}
+         <img class="arrow-img" src="{{forecast.winddirection_10m | arrowDirection}}" alt=""> 
+         <span>{{forecast.winddirection_10m | arrowDirectionName}}</span>
+        </span>
+      
+      <span class="data-span">Wind speed 80 m: <br> {{forecast.windspeed_80m | unit: ' km/h'}} <img class="wind-img" src="{{forecast.windspeed_80m | intensity}}" alt=""></span>
+      <span class="data-span">Wind direction 80 m: <br> {{forecast.winddirection_80m | unit: '° N'}} <img class="arrow-img" src="{{forecast.winddirection_80m | arrowDirection}}" alt=""> <span>{{forecast.winddirection_80m | arrowDirectionName}}</span></span>
+
+      <span class="data-span">Wind speed 120 m: <br> {{forecast.windspeed_120m | unit: ' km/h'}} <img class="wind-img" src="{{forecast.winddirection_120m | intensity}}" alt=""></span>
+      <span class="data-span">Wind direction 120 m: <br> {{forecast.winddirection_120m | unit: '° N'}} <img class="arrow-img" src="{{forecast.winddirection_120m | arrowDirection}}" alt=""> <span>{{forecast.winddirection_120m | arrowDirectionName}}</span></span>
+
+      <span class="data-span">Wind speed 180 m: <br> {{forecast.windspeed_180m | unit: ' km/h'}} <img class="wind-img" src="{{forecast.windspeed_180m | intensity}}" alt=""></span>
+      <span class="data-span">Wind direction 180 m: <br> {{forecast.winddirection_180m | unit: '° N'}} <img class="arrow-img" src="{{forecast.winddirection_180m | arrowDirection}}" alt=""> <span>{{forecast.winddirection_180m | arrowDirectionName}}</span></span>
+
+      <span class="data-span-gusts">Wind guts: {{forecast.windgusts_10m}} <img class="air-img" src="../../../assets/air.svg" alt=""></span>
     </div>
   </div>
 

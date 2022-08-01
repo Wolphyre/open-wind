@@ -14,6 +14,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { ArrowDirectionPipe } from './components/pipes/arrow-direction/arrow-direction.pipe';
 import { IntensityPipe } from './components/pipes/wind-intensity/intensity.pipe';
 import { CustomDatePipe } from './components/pipes/custom-date/custom-date.pipe';
+import { PrecipitationPipe } from './components/pipes/precipitation/precipitation.pipe';
+import { ArrowDirectionNamePipe } from './components/pipes/arrow-direction-name/arrow-direction-name.pipe';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { CustomDatePipe } from './components/pipes/custom-date/custom-date.pipe'
     FooterComponent,
     ArrowDirectionPipe,
     IntensityPipe,
-    CustomDatePipe
+    CustomDatePipe,
+    PrecipitationPipe,
+    ArrowDirectionNamePipe
   ],
   imports: [
     BrowserModule,

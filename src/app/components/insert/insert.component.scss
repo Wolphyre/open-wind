@@ -60,11 +60,52 @@ input{
 }
 
 .data-span{
+  display: flex;
+  flex-direction: row;
   margin: 8px;
   padding: 8px;
 }
 
+.data-span-time{
+  font-size: x-large;
+  margin: 12px;
+}
+
+.data-span-gusts{
+  display: flex;
+  flex-direction: column;
+  margin-left: 8px;
+  padding: 8px;
+}
+
+
 .arrow-img{
 width: auto;
-height: 20%;
+height: 40%;
+margin-left: 12px;
+}
+
+.wind-img{
+  width: auto;
+  height: 70%;
+  margin-left: 12px;
+  }
+
+.air-img{
+  width: 12%;
+  height: auto;
+}
+
+.precipitation-img{
+  width: auto;
+  height: 40%;
+  margin-left: 12px;
+}
+
+
+@media screen and (min-width: 600px) {
+.container{
+  display: grid;
+  grid-template-columns: 1fr;
+}
 }
