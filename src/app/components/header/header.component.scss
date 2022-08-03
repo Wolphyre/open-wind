@@ -9,10 +9,28 @@
     background-size: contain;
     background-repeat: no-repeat;
     font-family: 'Stick No Bills', sans-serif;
-    font-size: xx-large;
+    font-size: 6rem;
+    text-shadow: 2px 0 rgb(0, 0, 0), -2px 0 rgb(3, 3, 3), 0 2px rgb(0, 0, 0), 0 -2px rgb(0, 0, 0),
+    1px 1px rgb(0, 0, 0), -1px -1px rgb(0, 0, 0), 1px -1px rgb(0, 0, 0), -1px 1px rgb(0, 0, 0);
+    border-bottom: solid black 1px;
+    
 }
 
 .title{
     text-align: center;
-    padding: 36px;
+    color: white;
+    max-width: auto ;
+    
+
 }
+
+@media screen and (max-width: 600px) {
+    .header-container{
+        font-size: xx-large;
+    }
+
+    .title{
+        padding-top: 2.5rem;
+    }
+}
+
