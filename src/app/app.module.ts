@@ -16,6 +16,8 @@ import { IntensityPipe } from './components/pipes/wind-intensity/intensity.pipe'
 import { CustomDatePipe } from './components/pipes/custom-date/custom-date.pipe';
 import { PrecipitationPipe } from './components/pipes/precipitation/precipitation.pipe';
 import { ArrowDirectionNamePipe } from './components/pipes/arrow-direction-name/arrow-direction-name.pipe';
+import { MapComponent } from './components/map/map.component';
+
 
 @NgModule({
   declarations: [
@@ -29,7 +31,8 @@ import { ArrowDirectionNamePipe } from './components/pipes/arrow-direction-name/
     IntensityPipe,
     CustomDatePipe,
     PrecipitationPipe,
-    ArrowDirectionNamePipe
+    ArrowDirectionNamePipe,
+    MapComponent
   ],
   imports: [
     BrowserModule,

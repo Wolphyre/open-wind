@@ -1,0 +1,20 @@
+.map-container {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 30px;
+    min-height: 20rem;
+    min-width: 20rem;
+}
+
+.map-frame {
+    border: 2px solid black;
+    min-height: 20rem;
+    min-width: 20rem;
+}
+
+#map {
+    height: 100%;
+    min-height: 20rem;
+}

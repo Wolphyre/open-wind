@@ -1,11 +1,11 @@
-
 <div class="input-data">
 
   <span class="lat-lng-span">Put your latitude here<input type="number" min="-90" max="89.9" #lat [defaultValue]="44"></span>
-  <span class="lat-lng-span">Put your longitude here<input type="number" min="0" max="179.9" #lng [defaultValue]="5"></span>
+  <span class="lat-lng-span">Put your longitude here<input type="number" min="0" max="179.9" #lng [defaultValue]="8"></span>
   <!-- <img src="../assets/wind-intensity/wind-int-calm.svg" alt=""> -->
   <!-- <a routerLink="/meteo/{{lat.value}}@{{lng.value}}" class="coord-button">GO!</a> -->
   <button class="coord-button"  (click)="displayCord(lat.value , lng.value)">GO</button>
+  <app-map></app-map>
 </div>
   <div class="container">
     <div *ngFor="let forecast of forecastData" class="data-container">
@@ -31,4 +31,3 @@
     </div>
   </div>
   <div class="empy-space"></div>
-
