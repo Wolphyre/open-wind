@@ -32,7 +32,7 @@ import { MapComponent } from './components/map/map.component';
     CustomDatePipe,
     PrecipitationPipe,
     ArrowDirectionNamePipe,
-    MapComponent
+    MapComponent,
   ],
   imports: [
     BrowserModule,

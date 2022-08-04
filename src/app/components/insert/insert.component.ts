@@ -1,3 +1,4 @@
+import { getNumberOfCurrencyDigits } from '@angular/common';
 import { Component, OnInit, Renderer2 } from '@angular/core';
 import { WindForecast } from 'src/app/model/wind-forecast';
 import { WeatherService } from 'src/app/services/weather-service/weather.service';
@@ -8,11 +9,10 @@ import { WeatherService } from 'src/app/services/weather-service/weather.service
   styleUrls: ['./insert.component.scss']
 })
 export class InsertComponent implements OnInit {
-
   public forecastData: WindForecast[] = [];
-
+  
   constructor(private weatherServ: WeatherService, private renderer: Renderer2) { }
-
+  
 
 
   ngOnInit(): void {
@@ -29,7 +29,11 @@ export class InsertComponent implements OnInit {
       })
     }
 
+    
   }
+
+
+
   // ParseInt(value: string) {
   //   return parseInt(value)
   // }
