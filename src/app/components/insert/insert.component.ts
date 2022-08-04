@@ -10,17 +10,25 @@ import { WeatherService } from 'src/app/services/weather-service/weather.service
 })
 export class InsertComponent implements OnInit {
   public forecastData: WindForecast[] = [];
-  
+  public latlng: any = null;
+
   constructor(private weatherServ: WeatherService, private renderer: Renderer2) { }
   
-
 
   ngOnInit(): void {
 
   }
 
+ changeLatLng(latlng:any){
+  const latInput: HTMLInputElement | null = (document.getElementById("latInput")as HTMLInputElement) ;
+  const lngInput: HTMLInputElement | null = (document.getElementById("lngInput")as HTMLInputElement) ;
+  latInput!.value = latlng.lat;
+  lngInput!.value = latlng.lng;
+ }
+
 
   displayCord(lat: string, lng: string) {
+    this.latlng = {lat, lng};
     this.weatherServ.verifyValue(lat, lng)
     if (lat && lng) {
       this.weatherServ.getMeteoForecastWithLatLng(lat, lng).subscribe({

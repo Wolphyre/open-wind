@@ -1,4 +1,4 @@
-import { Component, AfterViewInit, Input } from '@angular/core';
+import { Component, AfterViewInit, Input, EventEmitter, Output } from '@angular/core';
 import * as L from 'leaflet';
 
 @Component({
@@ -8,13 +8,23 @@ import * as L from 'leaflet';
 })
 export class MapComponent implements AfterViewInit {
   private map: any;
+  @Output() public onMapClicked = new EventEmitter<any>()
 
+  @Input()set latlng(value:any){
+    if (value){
+      this.map.flyTo(value)
+    }
+  }
 
   private initMap(): void {
     this.map = L.map('map', {
      center: [ 44.40, 8.94],
       zoom: 12 
     });
+
+    this.map.on("click", (event:any)=>{
+      this.onMapClicked.emit(event.latlng);
+    })
 
     const tiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       maxZoom: 16,
